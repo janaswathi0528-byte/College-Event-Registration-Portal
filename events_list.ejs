@@ -1,0 +1,9 @@
+<h2 class="h2">All Events</h2>
+<table class="table">
+  <thead><tr><th>Name</th><th>Type</th><th>College</th><th>Fee</th></tr></thead>
+  <tbody>
+  <% events.forEach(e => { %>
+    <tr class="fade-in"><td><%= e.name %></td><td><%= e.type %></td><td><%= e.collegeName %></td><td>₹<%= e.fee %></td></tr>
+  <% }) %>
+  </tbody>
+</table>

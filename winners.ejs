@@ -1,0 +1,28 @@
+<h2 class="h2">Mark Winners — Event #<%= eventId %></h2>
+<form method="post" class="card form">
+  <label>1st Place
+    <select name="first">
+      <option value="">—</option>
+      <% regs.forEach(r => { %>
+        <option value="<%= r.studentId %>"><%= r.studentName %></option>
+      <% }) %>
+    </select>
+  </label>
+  <label>2nd Place
+    <select name="second">
+      <option value="">—</option>
+      <% regs.forEach(r => { %>
+        <option value="<%= r.studentId %>"><%= r.studentName %></option>
+      <% }) %>
+    </select>
+  </label>
+  <label>3rd Place
+    <select name="third">
+      <option value="">—</option>
+      <% regs.forEach(r => { %>
+        <option value="<%= r.studentId %>"><%= r.studentName %></option>
+      <% }) %>
+    </select>
+  </label>
+  <button class="btn">Save Winners</button>
+</form>

@@ -1,0 +1,19 @@
+<h2 class="h2">Create Event</h2>
+<form method="post" action="/admin/events/new" class="card form">
+  <label>Event Name<input name="name" required></label>
+  <label>Type
+    <select name="type">
+      <option value="indoor">Indoor</option>
+      <option value="outdoor">Outdoor</option>
+    </select>
+  </label>
+  <label>College
+    <select name="collegeId" required>
+      <% colleges.forEach(c => { %>
+        <option value="<%= c.id %>"><%= c.name %></option>
+      <% }) %>
+    </select>
+  </label>
+  <label>Fee (₹)<input name="fee" type="number" min="0" step="0.01"></label>
+  <button class="btn">Create</button>
+</form>

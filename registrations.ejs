@@ -1,0 +1,9 @@
+<h2 class="h2">Student Registrations</h2>
+<table class="table">
+  <thead><tr><th>Event</th><th>Student</th><th>Status</th></tr></thead>
+  <tbody>
+  <% regs.forEach(r => { %>
+    <tr class="fade-in"><td><%= r.eventName %></td><td><%= r.studentName %></td><td><%= r.status %></td></tr>
+  <% }) %>
+  </tbody>
+</table>

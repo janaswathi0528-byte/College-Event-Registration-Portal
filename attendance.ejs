@@ -1,0 +1,14 @@
+<h2 class="h2">Attendance — Event #<%= eventId %></h2>
+<form method="post" class="card form">
+  <ul class="list">
+    <% regs.forEach(r => { %>
+      <li class="list-item">
+        <label class="checkbox">
+          <input type="checkbox" name="present" value="<%= r.regId %>">
+          <span><%= r.studentName %></span>
+        </label>
+      </li>
+    <% }) %>
+  </ul>
+  <button class="btn">Save Attendance</button>
+</form>

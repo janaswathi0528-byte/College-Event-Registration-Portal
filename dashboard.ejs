@@ -1,0 +1,34 @@
+<section>
+  <h2 class="h2">Admin Dashboard</h2>
+  <div class="grid">
+    <div class="card lift">
+      <h3>Create Event</h3>
+      <a class="btn" href="/admin/events/new">New Event</a>
+    </div>
+    <div class="card lift">
+      <h3>Register College</h3>
+      <a class="btn" href="/admin/colleges/new">Add College</a>
+    </div>
+    <div class="card lift">
+      <h3>Add Teacher</h3>
+      <form method="post" action="/admin/teachers/new" class="form">
+        <input name="name" placeholder="Name" required>
+        <input name="email" type="email" placeholder="Email" required>
+        <input name="password" type="password" placeholder="Temp Password" required>
+        <button class="btn">Add</button>
+      </form>
+    </div>
+  </div>
+  <h3 class="h3">Recent Events</h3>
+  <ul class="list">
+    <% events.forEach(e => { %>
+      <li class="list-item"><%= e.name %> • <%= e.type %></li>
+    <% }) %>
+  </ul>
+  <h3 class="h3">Recent Registrations</h3>
+  <ul class="list">
+    <% regs.forEach(r => { %>
+      <li class="list-item">Reg #<%= r.id %></li>
+    <% }) %>
+  </ul>
+</section>
